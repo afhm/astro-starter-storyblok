@@ -286,6 +286,7 @@ export async function getImagesOptimized(
       // Fullwidth images have 100% width, so aspectRatio is applicable
       console.error('When aspectRatio is set, either width or height must also be set');
       console.error('Image', image);
+      console.log('sadsad');
     }
   } else if (width && height) {
     aspectRatio = width / height;
