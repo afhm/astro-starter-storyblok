@@ -284,15 +284,18 @@ export async function getImagesOptimized(
       width = Number(height * aspectRatio);
     } else if (layout !== 'fullWidth') {
       // Fullwidth images have 100% width, so aspectRatio is applicable
+      // eslint-disable-next-line no-console
       console.error('When aspectRatio is set, either width or height must also be set');
+      // eslint-disable-next-line no-console
       console.error('Image', image);
-      console.log('sadsad');
     }
   } else if (width && height) {
     aspectRatio = width / height;
   } else if (layout !== 'fullWidth') {
     // Fullwidth images don't need dimensions
+    // eslint-disable-next-line no-console
     console.error('Either aspectRatio or both width and height must be set');
+    // eslint-disable-next-line no-console
     console.error('Image', image);
   }
 
