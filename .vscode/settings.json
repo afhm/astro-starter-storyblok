@@ -7,5 +7,11 @@
   "eslint.validate": ["javascript", "javascriptreact", "astro"],
   "prettier.documentSelectors": ["**/*.astro"],
   "typescript.tsdk": "./node_modules/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  }
 }

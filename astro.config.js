@@ -1,21 +1,20 @@
-import mdx from "@astrojs/mdx";
-import partytown from "@astrojs/partytown";
-import sitemap from "@astrojs/sitemap";
-import tailwind from "@astrojs/tailwind";
-import { defineConfig } from "astro/config";
-import compress from "astro-compress";
-import path from "path";
-import { fileURLToPath } from "url";
+import mdx from '@astrojs/mdx';
+import partytown from '@astrojs/partytown';
+import sitemap from '@astrojs/sitemap';
+import tailwind from '@astrojs/tailwind';
+import { defineConfig } from 'astro/config';
+import compress from 'astro-compress';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-import { ANALYTICS, SITE } from "./src/utils/config";
-import { readingTimeRemarkPlugin } from "./src/utils/frontmatter.mjs";
-import tasks from "./src/utils/tasks.mjs";
+import { ANALYTICS, SITE } from './src/utils/config';
+import { readingTimeRemarkPlugin } from './src/utils/frontmatter.mjs';
+import tasks from './src/utils/tasks.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const whenExternalScripts = (items = []) =>
-  ANALYTICS.vendors.googleAnalytics.id &&
-    ANALYTICS.vendors.googleAnalytics.partytown
+  ANALYTICS.vendors.googleAnalytics.id && ANALYTICS.vendors.googleAnalytics.partytown
     ? Array.isArray(items)
       ? items.map((item) => item())
       : [items()]
@@ -24,9 +23,9 @@ const whenExternalScripts = (items = []) =>
 export default defineConfig({
   site: SITE.site,
   base: SITE.base,
-  trailingSlash: SITE.trailingSlash ? "always" : "never",
+  trailingSlash: SITE.trailingSlash ? 'always' : 'never',
 
-  output: "static",
+  output: 'static',
 
   integrations: [
     tailwind({
@@ -37,8 +36,8 @@ export default defineConfig({
 
     ...whenExternalScripts(() =>
       partytown({
-        config: { forward: ["dataLayer.push"] },
-      }),
+        config: { forward: ['dataLayer.push'] },
+      })
     ),
 
     tasks(),
@@ -62,7 +61,7 @@ export default defineConfig({
   vite: {
     resolve: {
       alias: {
-        "~": path.resolve(__dirname, "./src"),
+        '~': path.resolve(__dirname, './src'),
       },
     },
   },

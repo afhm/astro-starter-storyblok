@@ -26,7 +26,10 @@ const tasksIntegration = () => {
           const sitemapExists = fs.existsSync(sitemapFile);
 
           if (hasIntegration && sitemapExists) {
-            const robotsTxt = fs.readFileSync(robotsTxtFile, { encoding: 'utf8', flags: 'a+' });
+            const robotsTxt = fs.readFileSync(robotsTxtFile, {
+              encoding: 'utf8',
+              flags: 'a+',
+            });
             const sitemapUrl = new URL(sitemapName, String(new URL(config.base, config.site)));
             const pattern = /^Sitemap:(.*)$/m;
 
