@@ -15,7 +15,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const whenExternalScripts = (items = []) =>
   ANALYTICS.vendors.googleAnalytics.id &&
-  ANALYTICS.vendors.googleAnalytics.partytown
+    ANALYTICS.vendors.googleAnalytics.partytown
     ? Array.isArray(items)
       ? items.map((item) => item())
       : [items()]

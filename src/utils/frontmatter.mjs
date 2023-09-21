@@ -1,5 +1,5 @@
-import { toString } from "mdast-util-to-string";
-import getReadingTime from "reading-time";
+import getReadingTime from 'reading-time';
+import { toString } from 'mdast-util-to-string';
 
 export function readingTimeRemarkPlugin() {
   return function (tree, file) {
