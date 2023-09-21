@@ -1,7 +1,7 @@
 {
   "name": "astro-starter",
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "husky install | chmod ug+x .husky/*",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
