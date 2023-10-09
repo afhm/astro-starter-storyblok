@@ -42,7 +42,7 @@
     "@types/node": "18.17.15",
     "@typescript-eslint/eslint-plugin": "^6.7.2",
     "@typescript-eslint/parser": "^6.7.2",
-    "astro-compress": "^2.0.15",
+    "astro-compress": "astro-community/AstroCompress#no-sharp",
     "bun-types": "^1.0.2",
     "eslint": "^8.49.0",
     "eslint-config-airbnb-base": "15.0.0",
