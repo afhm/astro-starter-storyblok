@@ -1,5 +1,7 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
+import TwSizeIndicator from '~/components/TwSizeIndicator.astro';
+import '~/assets/styles/tailwind.css';
 
 interface Props {
   title: string;
@@ -17,9 +19,12 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <ViewTransitions fallback="swap" />
+    <script src="../gsap"></script>
   </head>
   <body>
+    <TwSizeIndicator />
     <slot />
+    <!-- <Footer /> -->
     <style is:global>
       :root {
         --accent: 124, 58, 237;

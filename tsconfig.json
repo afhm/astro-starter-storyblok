@@ -4,10 +4,16 @@
     "strictNullChecks": true,
     "allowJs": true,
     "baseUrl": ".",
-    "types": ["bun-types"],
+    "types": [
+      "bun-types"
+    ],
     "incremental": true,
     "paths": {
-      "~/*": ["src/*"]
-    }
+      "~/*": [
+        "src/*"
+      ]
+    },
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js"
   }
 }

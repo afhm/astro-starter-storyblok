@@ -14,15 +14,20 @@
     "lint:types": "tsc --noEmit",
     "lint:fix": "npm-run-all --serial lint:fix:*",
     "lint:fix:js+ts": "pnpm run lint:js+ts --fix",
-    "lint:fix:format": "prettier \"**/*\" --write --ignore-unknown"
+    "lint:fix:format": "prettier \"**/*\" --write --ignore-unknown",
+    "proxy": "mkcert -install && mkcert localhost && local-ssl-proxy --source 3010 --target 4321 --cert localhost.pem --key localhost-key.pem"
   },
   "dependencies": {
     "@astrojs/rss": "^3.0.0",
     "@astrojs/sitemap": "^3.0.0",
+    "@astrojs/solid-js": "^3.0.2",
     "@astrolib/analytics": "^0.4.2",
     "@astrolib/seo": "^1.0.0-beta.4",
     "@fontsource-variable/inter": "^5.0.8",
+    "@storyblok/astro": "^3.0.1",
     "astro": "3.0.12",
+    "gsap-trial": "file:gsap-trial",
+    "solid-js": "^1.4.3",
     "unpic": "^3.10.0"
   },
   "devDependencies": {

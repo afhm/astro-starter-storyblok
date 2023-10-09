@@ -6,3 +6,5 @@ dist/
 .env.local
 .env.*.local
 .DS_Store
+localhost.pem
+localhost-key.pem

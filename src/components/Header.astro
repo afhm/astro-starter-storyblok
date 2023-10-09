@@ -1,0 +1,33 @@
+---
+// import HeaderDrawerContent from './HeaderDrawerContent.astro';
+
+import AlifSenseLogo from '~/icons/AlifsenseLogo';
+const { blok } = Astro.props;
+---
+
+<header id="nav" class="p-nav fixed top-0 z-[4] max-h-screen w-full overflow-x-clip">
+  <nav
+    aria-label="Primary"
+    class="p-header h-header mt-5 flex items-center justify-center transition-all duration-1000"
+  >
+    <div class="flex min-w-[900px] items-center rounded-full p-6 shadow-md">
+      <div class="px-3">
+        <a href="/" rel="prefetch" title="Home" data-home-link>
+          <AlifSenseLogo class="alif-logo nlink nav-logo invisible w-[150px] lg:w-[200px]" />
+        </a>
+      </div>
+
+      <div class="font-nav ml-auto mt-1 hidden shrink flex-row items-center gap-10 font-medium uppercase lg:flex">
+        {
+          blok.header_menu.map((menu) => (
+            <a href={`/${menu.link.cached_url}`} class="nlink invisible hover:text-slate-400">
+              {menu.name}
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </nav>
+
+  <!-- <HeaderDrawerContent /> -->
+</header>
