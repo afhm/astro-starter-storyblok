@@ -26,6 +26,7 @@
     "@fontsource-variable/inter": "^5.0.8",
     "@storyblok/astro": "^3.0.1",
     "astro": "3.0.12",
+    "classie": "^1.0.0",
     "gsap-trial": "file:gsap-trial",
     "solid-js": "^1.4.3",
     "unpic": "^3.10.0"

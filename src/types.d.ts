@@ -279,3 +279,10 @@ export interface Content extends Headline, Widget {
 }
 
 export interface Contact extends Headline, Form, Widget {}
+
+// add decleration for classie module
+declare module 'classie' {
+  export function add(elem: HTMLElement, c: string): void;
+  export function remove(elem: HTMLElement, c: string): void;
+  export function toggle(elem: HTMLElement, c: string): void;
+}

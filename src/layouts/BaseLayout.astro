@@ -20,8 +20,9 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <ViewTransitions fallback="swap" />
     <script src="../gsap"></script>
+    <script src="../utils/classie"></script>
   </head>
-  <body>
+  <body class="h-full">
     <TwSizeIndicator />
     <slot />
     <!-- <Footer /> -->
